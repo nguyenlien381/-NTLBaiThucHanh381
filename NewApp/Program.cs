@@ -1,14 +1,19 @@
-﻿using System.IO.Pipes;
-using NewApp.Models;
-public class Sinhvien
+﻿public class Giaiphuongtrinh
 {
-    public static void Main(string[] args)
+     public static void Main(string[] args)
     {
-        Sinhvien ps = new Sinhvien();
-        string Ht = "Nguyen Thi Lien";
-        int Sdt = 093625345;
-        int Tuoi = 21;
-        System.Console.WriteLine("{0} - {1} -{2}",Ht,Sdt,Tuoi);
+        Giaiphuongtrinh ps = new Giaiphuongtrinh();
+            int a = 10; 
+            int b = 5;
+            int c = 8;
+            double x;
+            float delta;
+            float x1;
+            float x2;
+            if(a != 0)
+            {
+                x = (double) - b / a;
+                 System.Console.WriteLine("Phuong trinh co nghiem x = {0}", Math.Round(x,2));
+            }
     }
-    
 }
