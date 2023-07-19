@@ -6,6 +6,7 @@ namespace NewApp.Models
         public string FullName { get; set; }
         public string Address { get; set; }
         public int Age { get; set; }
+        public string Cancuoccongdan { get; set; }
         public void EnterData()
         { 
             System.Console.WriteLine("FullName = ");
@@ -13,11 +14,18 @@ namespace NewApp.Models
             System.Console.WriteLine("Address = ");
             Address = Console.ReadLine();
             System.Console.WriteLine("Age = ");
-            Age = Convert.ToInt32(Console.ReadLine());
+            try{
+                Age = Convert.ToInt32(Console.ReadLine());
+            }catch(Exception e)
+            {
+                Age = 0;
+            }
+            System.Console.WriteLine("Cancuoccongdan = ");
+            Cancuoccongdan = Console.ReadLine();
         }
         public void Display()
         {
-            System.Console.WriteLine("{0} - {1} -{2} tuoi", FullName,Address,Age);
+            System.Console.WriteLine("{0} - {1} -{2} - {3} ", FullName,Address,Age,Cancuoccongdan);
         }
         public void Display(string ten, int tuoi)
         {
@@ -27,10 +35,11 @@ namespace NewApp.Models
         {
          System.Console.WriteLine("Sinh vien {0} - {1}",ten,diachi);   
         }
-        public int GetYearOfBirth(int age)
+        public int GetYearOfBirth(int Age)
         {
-            int yearOfBirth = 2023 - age;
+            int yearOfBirth = 2023 - Age;
             return yearOfBirth;
         }
+        
     }
 }
